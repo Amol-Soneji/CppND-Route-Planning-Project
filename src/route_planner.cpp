@@ -123,6 +123,7 @@ void RoutePlanner::AStarSearch() {
         AddNeighbors(current_node);
         std::cout << (*current_node).distance(*end_node) << "\n";//For debug pupouses.  
     }
+    std::cout << "Outside of loop.  " << "\n";//To see if it is actually the rendering that is taking time.  
     std::vector<RouteModel::Node> thePath = ConstructFinalPath(current_node);
     m_Model.path = thePath;
 }
