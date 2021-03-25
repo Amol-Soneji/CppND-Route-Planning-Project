@@ -121,7 +121,7 @@ void RoutePlanner::AStarSearch() {
     {
         current_node = NextNode();
         AddNeighbors(current_node);
-        cout << (*current_node).distance(*end_node) << "\n";//For debug pupouses.  
+        std::cout << (*current_node).distance(*end_node) << "\n";//For debug pupouses.  
     }
     std::vector<RouteModel::Node> thePath = ConstructFinalPath(current_node);
     m_Model.path = thePath;
